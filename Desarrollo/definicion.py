@@ -1,8 +1,7 @@
-import gym
 import numpy as np
-import matplotlib.pyplot as plt
 
 def q_learning_cartpole(
+    env,
     num_episodes=1000, 
     gamma=0.99, 
     alpha=0.1, 
@@ -16,7 +15,7 @@ def q_learning_cartpole(
                   np.linspace(-3.0, 3.0, 20)]  # Velocidad angular del péndulo
     
     # Inicializando tabla Q
-    num_actions = env.action_space.n  # Dos acciones: izquierda o derecha
+    num_actions = env.action_space.n
     q_table = np.zeros([len(bins) + 1 for bins in state_bins] + [num_actions])
     
     def discretize_state(state):
@@ -68,6 +67,5 @@ def q_learning_cartpole(
     
         if (episode + 1) % 100 == 0:
             print(f"Episode {episode + 1}/{num_episodes}, Total Reward: {total_reward}, Epsilon: {epsilon:.3f}")
-    
-    env.close()
+
     return q_table, rewards
