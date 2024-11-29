@@ -10,7 +10,6 @@ def q_learning_cartpole(
     epsilon_decay=0.995, 
     epsilon_min=0.01
 ):
-    env = gym.make('CartPole-v1')
     state_bins = [np.linspace(-2.4, 2.4, 20),  # Posición del carro
                   np.linspace(-3.0, 3.0, 20),  # Velocidad del carro
                   np.linspace(-0.2, 0.2, 20),  # Ángulo del péndulo
