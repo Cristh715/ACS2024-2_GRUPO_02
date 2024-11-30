@@ -1,21 +1,21 @@
-from cart_pole import create_cartpole_env, run_episode
+from cart_pole import create_cartpole_env
+from definicion import q_learning_cartpole
 
-num_episodes = 5
-
-x = 0.0          # Posición del carrito
-v_cart = 0.0     # Velocidad del carrito
-ang_pend = 0.0   # Ángulo del péndulo
-v_ang = 0.0      # Velocidad angular del péndulo
-
-def main(): #Funcion principal
-    num_episodes = 5
+def main():
+    num_episodes = 1000
     env = create_cartpole_env()
 
-    for episode in range(num_episodes):
-        print(f"Inicio del episodio {episode + 1}")
-        total_reward = run_episode(env) 
-        print(f"Recompensa total en el episodio {episode + 1}: {total_reward}")
+    print("Iniciando el entrenamiento con Q-learning...")
+    q_table, rewards = q_learning_cartpole(env, num_episodes=num_episodes)
 
+    print(f"Entrenamiento completado. El agente ha entrenado durante {num_episodes} episodios.")
+    
+    # Imprimir recompensas de los primeros episodios
+    print("Recompensas de los primeros episodios:")
+    for episode in range(min(10, num_episodes)):
+        print(f"Episodio {episode + 1}: Recompensa total = {rewards[episode]}")
+
+    # Cerrar el entorno
     env.close()
 
 if __name__ == "__main__":
