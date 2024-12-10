@@ -28,6 +28,8 @@ Puedes instalarlas con el siguiente comando:
 
 ```bash
 pip install numpy keyboard gym scikit-learn matplotlib
+```
+
 
 ### Si se desea parar el proceso se puede interrumpir el proceso kernel lo cual se mostraría esta imagen
 ![image](https://github.com/user-attachments/assets/3cc31830-e31f-4010-ad3a-ac3e40ae8860)
