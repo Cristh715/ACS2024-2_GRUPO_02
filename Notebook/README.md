@@ -31,7 +31,7 @@ pip install numpy keyboard gym scikit-learn matplotlib
 ```
 
 
-### Si se desea parar el proceso se puede interrumpir el proceso kernel lo cual se mostraría esta imagen
+#### Si se desea parar el proceso se puede interrumpir el proceso kernel lo cual se mostraría esta imagen
 ![image](https://github.com/user-attachments/assets/3cc31830-e31f-4010-ad3a-ac3e40ae8860)
-### 4 Después de mil episodios empezará a mostrarse la interfaz del pendulo en una ventana .py , esto con el fin de que se pueda entrenar más rápido
-### 5 Después de detener el proceso se puede ejecutar las celdas de gráficas.
+#### Después de mil episodios empezará a mostrarse la interfaz del pendulo en una ventana .py , esto con el fin de que se pueda entrenar más rápido
+#### Después de detener el proceso se puede ejecutar las celdas de gráficas.
